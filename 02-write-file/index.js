@@ -24,7 +24,7 @@ readline.on('line', data => {
 
 process.on('exit', code => {
   if (code === 0) {
-    console.log('Thanks for your attention!');
+    console.log('\nThanks for your attention!');
   } else {
     console.log(`Error with ${code}`);
   }
