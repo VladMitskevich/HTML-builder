@@ -3,8 +3,8 @@ const fsPromises = fs.promises;
 const path = require('path');
 const originDirPath = path.join(__dirname, 'files');
 const copyDirPath = path.join(__dirname, 'files-copy');
-fs.access(copyDirPath, (data) => {
-  if(data) {
+fs.access(copyDirPath, (err) => {
+  if(err) {
     fsPromises.mkdir(copyDirPath);
     console.log('Files-copy created');
   }
